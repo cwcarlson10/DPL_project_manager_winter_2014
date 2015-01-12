@@ -6,7 +6,9 @@ $(function(){ // Document Ready
 
   $('#easter-icon').click(function(){
     $('#hidden-easter-link').click();
+    alert(" ^ ^ |  |  '\n' |  | v v     <-  ->    <-  ->    B A    START")
   });
+
 
   $('#jquery-ajax-button').click(function(){
     // $.ajax('/easter_egg',{
@@ -21,7 +23,7 @@ $(function(){ // Document Ready
     // });
 
     $.post(
-      '/easter_egg', 
+      '/easter_egg',
       {name: 'carlos', email: 'carlos@devpointlabs.com'},
       function(data, textStatus){
         console.log('The text status is:' + textStatus);

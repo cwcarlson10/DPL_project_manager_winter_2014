@@ -1,13 +1,13 @@
 
   <%= bootstrap_form_for(@project, remote: using_modal) do |f| %>
       <%= f.text_field :team %>
-    
+
       <%= f.text_field :title %>
-    
+
       <%= f.text_area :description %>
-    
+
       <%= f.date_field :deadline %>
-      
+
       <%= f.submit %>
       <% if using_modal %>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
