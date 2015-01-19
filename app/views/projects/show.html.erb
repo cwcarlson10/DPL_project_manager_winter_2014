@@ -27,8 +27,9 @@
         <thead>
             <tr>
                 <th class="col-md-3 text-center">Title</th>
-                <th class="col-md-5 text-center">Description</th>
+                <th class="col-md-4 text-center">Description</th>
                 <th class="col-md-1.5 text-center">Deadline</th>
+                <th class="col-md-1 text-center">Assigned To</th>
                 <th class="col-md-1 text-center">Completed</th>
                 <th class="col-md-1.5 text-center"></th>
             </tr>
@@ -38,8 +39,9 @@
 
               <tr class="table-list" data-id='<%= task.id %>'>
                   <td class="col-md-3 task-title"><%= task.title %></td>
-                  <td class="col-md-5"><%= task.description %></td>
+                  <td class="col-md-4"><%= task.description %></td>
                   <td class="col-md-1.5"><%= task.deadline %></td>
+                  <td class="col-md-3 task-title"><%= task.assignment %></td>
                   <td class="col-md-1 task-completed"><%= task.is_completed %></td>
                   <td class="col-md-1.5 btn-group.btn-group-justified btn-group-sm" role="group">
                     <div class='task_complete_button_div <%= "hidden" unless task.is_completed %>'>

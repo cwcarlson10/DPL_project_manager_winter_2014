@@ -1,12 +1,14 @@
-<%= bootstrap_form_for [@project, @task] do |f| %>
+<%= simple_form_for [@project, @task] do |f| %>
 
-  <%= f.text_field :title %>
+  <%= f.input :title %>
 
-  <%= f.text_area :description %>
+  <%= f.input :description %>
 
-  <%= f.date_field :deadline %>
+  <%= f.input :deadline %>
 
-  <%= f.check_box :is_completed, class: 'tog' %>
+  <%= f.input :is_completed, as: :check_boxes %>
+
+  <%= f.input :assignment, collection: :user_id, label_method: @user, value_method: :id %>
 
   <%= f.submit %>
 <% end %>

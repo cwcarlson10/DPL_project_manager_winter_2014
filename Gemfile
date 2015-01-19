@@ -9,6 +9,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
+gem 'simple_form'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -42,6 +43,7 @@ group :development, :test do
 end
 
 gem 'simplecov', :require => false, :group => :test
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
