@@ -7,7 +7,8 @@
       <tr>
         <th class="col-md-2.4 text-center">Team</th>
         <th class="col-md-2 text-center">Title</th>
-        <th class="col-md-4 text-center">Description</th>
+        <th class="col-md-1 text-center">Owner</th>
+        <th class="col-md-3 text-center">Description</th>
         <th class="col-md-1 text-center">Deadline</th>
         <th class="col-md-2.6 text-center"></th>
       </tr>
@@ -15,6 +16,7 @@
       <tr class="table-list">
         <td class="col-md-2.4"><%= @project.team %></td>
         <td class="col-md-2"><%= @project.title %></td>
+        <td class="col-md-2"><%= @project.user.name %></td>
         <td class="col-md-4"><%= @project.description %></td>
         <td class="col-md-1"><%= @project.deadline %></td>
         <td class="col-md-2.6 btn-group.btn-group-justified btn-group-sm" role="group">

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :tasks
+  has_many :projects
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -22,7 +23,7 @@ class User < ActiveRecord::Base
   def authorized_for_github!(authorized_token)
     self.update_attributes(github_access_token: authorized_token, github_state: 'completed')
   end
-  
+
   def is_github_authorized?
     self[:github_access_token] && self[:github_state] == 'completed'
   end

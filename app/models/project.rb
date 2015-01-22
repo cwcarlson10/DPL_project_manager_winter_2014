@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   has_many :tasks
+  belongs_to :user
 
   validates :team, presence: true
   validates :title, presence: true
